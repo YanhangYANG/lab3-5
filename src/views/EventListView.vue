@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import EventCard from '../components/EventCard.vue'
-import Cac from '../components/CaC.vue'
-
 import type { EventItem } from '@/type'
 
 import { computed, ref, watchEffect } from 'vue'
@@ -41,7 +39,7 @@ const hasNextPage = computed(() => {
 </script>
 
 <template>
-  <h1>Event For Good</h1>
+ 
 
   <main class="events">
     <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>

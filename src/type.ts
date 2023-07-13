@@ -11,13 +11,9 @@ export interface EventItem {
   airlineId: number
 }
 
-export interface StudentItem {
-  id: number
-  studentId: string
-  name: string
-  surname: string
-  gpa: number
-  image: string
-  penAmount: number
-  description: string
+export interface AirlineItem {
+  id: number;
+  AirlineName: string;
+  email: string;
+  address: string;
 }

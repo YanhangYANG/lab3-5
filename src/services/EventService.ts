@@ -1,5 +1,5 @@
 import type { AxiosInstance, AxiosResponse } from "axios"
-import type { EventItem } from "@/type"
+import type { AirlineItem, EventItem } from "@/type"
 import axios from "axios";
 
 const apiClient: AxiosInstance = axios.create({

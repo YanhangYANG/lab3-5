@@ -28,13 +28,15 @@ defineProps({
     <p>Travel Date: &nbsp;&nbsp;&nbsp;&nbsp;{{ event.travelDate }}</p>
     <p>&nbsp;</p>
     <p>AirLineId: &nbsp;&nbsp;&nbsp;&nbsp;{{ event.airlineId }}</p>
+    <p>&nbsp;</p>
   </div>
+  
 </template>
 
 <style>
 .detail {
   padding: 20px;
-  width: 265px;
+  width: 280px;
   cursor: pointer;
   border: 1px solid #39495c;
   margin-bottom: 18px;

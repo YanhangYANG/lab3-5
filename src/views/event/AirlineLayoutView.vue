@@ -1,19 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import  { type EventItem } from '@/type'
-import EventService from '@/services/EventService'
+import  { type AirlineItem} from '@/type'
+import AirlineService from '@/services/AirlineService';
 import { useRouter } from 'vue-router'
-const event = ref<EventItem | null>(null)
-
+const airline = ref<AirlineItem | null>(null)  // 修改变量名
 
 const props = defineProps({
   id: String
-  
 })
 const router = useRouter()
-EventService.getEventById(Number(props.id))
+AirlineService.getAirlineById(Number(props.id))
 .then((response) => {
-  event.value = response.data
+  airline.value = response.data   // 修改变量名
 }).catch((error) => {
   if (error.response && error.response.status === 404){
     router.push({name: '404-resource' , params: {resource: 'event'}})
@@ -23,11 +21,11 @@ EventService.getEventById(Number(props.id))
 })
 </script>
 <template>
-    <div v-if="event">
+    <div v-if="airline"> 
         <h1>
             Information
         </h1>
         
-        <RouterView :event = "event" ></RouterView>
+        <RouterView :airline = "airline" ></RouterView>  
     </div>
 </template>
